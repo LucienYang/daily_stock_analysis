@@ -438,12 +438,12 @@ jobs:
           else
             echo "  LiteLLM: ❌ 未配置"
           fi
-          echo "  Gemini API Key: $([ -n "$GEMINI_API_KEY" ] && echo '✅ 已配置' || echo '❌ 未配置')"
-          echo "  DeepSeek Key:   $([ -n "$DEEPSEEK_API_KEY" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  Anspire Key:    $([ -n "$ANSPIRE_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  AIHubMix Key:   $([ -n "$AIHUBMIX_KEY" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  OpenAI API Key: $([ -n "$OPENAI_API_KEY" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  Anthropic Key:  $([ -n "$ANTHROPIC_API_KEY" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
+          echo "  Gemini API Key: $([ -n "$GEMINI_API_KEY" ] && echo '✅ 已配置 $GEMINI_API_KEY'  || echo '❌ 未配置')"
+          echo "  DeepSeek Key:   $([ -n "$DEEPSEEK_API_KEY" ] && echo '✅ 已配置 $DEEPSEEK_API_KEY' || echo '⚪ 未配置')"
+          echo "  Anspire Key:    $([ -n "$ANSPIRE_API_KEYS" ] && echo '✅ 已配置 $ANSPIRE_API_KEYS' || echo '⚪ 未配置')"
+          echo "  AIHubMix Key:   $([ -n "$AIHUBMIX_KEY" ] && echo '✅ 已配置 $AIHUBMIX_KEY' || echo '⚪ 未配置')"
+          echo "  OpenAI API Key: $([ -n "$OPENAI_API_KEY" ] && echo '✅ 已配置 $OPENAI_API_KEY' || echo '⚪ 未配置')"
+          echo "  Anthropic Key:  $([ -n "$ANTHROPIC_API_KEY" ] && echo '✅ 已配置 $ANTHROPIC_API_KEY' || echo '⚪ 未配置')"
           echo ""
           echo "【数据源】"
           echo "  Tushare Token: $([ -n "$TUSHARE_TOKEN" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
@@ -456,12 +456,12 @@ jobs:
           fi
           echo ""
           echo "【搜索引擎】"
-          echo "  Bocha API Keys: $([ -n "$BOCHA_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  Tavily API Keys: $([ -n "$TAVILY_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  SerpAPI Keys: $([ -n "$SERPAPI_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  MiniMax API Keys: $([ -n "$MINIMAX_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  Brave API Keys: $([ -n "$BRAVE_API_KEYS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
-          echo "  SearXNG Base URLs: $([ -n "$SEARXNG_BASE_URLS" ] && echo '✅ 已配置' || echo '⚪ 未配置')"
+          echo "  Bocha API Keys: $([ -n "$BOCHA_API_KEYS" ] && echo '✅ 已配置 $BOCHA_API_KEYS' || echo '⚪ 未配置')"
+          echo "  Tavily API Keys: $([ -n "$TAVILY_API_KEYS" ] && echo '✅ 已配置 $TAVILY_API_KEYS' || echo '⚪ 未配置')"
+          echo "  SerpAPI Keys: $([ -n "$SERPAPI_API_KEYS" ] && echo '✅ 已配置 $SERPAPI_API_KEYS' || echo '⚪ 未配置')"
+          echo "  MiniMax API Keys: $([ -n "$MINIMAX_API_KEYS" ] && echo '✅ 已配置 $MINIMAX_API_KEYS' || echo '⚪ 未配置')"
+          echo "  Brave API Keys: $([ -n "$BRAVE_API_KEYS" ] && echo '✅ 已配置 $BRAVE_API_KEYS' || echo '⚪ 未配置')"
+          echo "  SearXNG Base URLs: $([ -n "$SEARXNG_BASE_URLS" ] && echo '✅ 已配置 $SEARXNG_BASE_URLS' || echo '⚪ 未配置')"
           case "${SEARXNG_PUBLIC_INSTANCES_ENABLED,,}" in
             0|false|no|off)
               echo "  SearXNG Public Instances: ❌ 已禁用"
