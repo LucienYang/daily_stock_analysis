@@ -38,6 +38,27 @@ jobs:
     timeout-minutes: ${{ fromJSON(vars.ANALYSIS_TIMEOUT_MINUTES || '30') }}
     
     steps:
+      - name: 查看Secretaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        run: |
+          echo "ANSPIRE_API_KEYS: ${{ secrets.ANSPIRE_API_KEYS }} "
+          echo "ANSPIRE_LLM_MODEL: ${{ vars.ANSPIRE_LLM_MODEL || secrets.ANSPIRE_LLM_MODEL }}"
+          echo "ANSPIRE_LLM_BASE_URL: ${{ vars.ANSPIRE_LLM_BASE_URL || secrets.ANSPIRE_LLM_BASE_URL }}"
+          echo "ANSPIRE_LLM_ENABLED: ${{ vars.ANSPIRE_LLM_ENABLED || secrets.ANSPIRE_LLM_ENABLED }}"
+          echo "BOCHA_API_KEYS: ${{ secrets.BOCHA_API_KEYS }}"
+          echo "TAVILY_API_KEYS: ${{ secrets.TAVILY_API_KEYS }}"
+          echo "SERPAPI_API_KEYS: ${{ secrets.SERPAPI_API_KEYS }}"
+          echo "MINIMAX_API_KEYS: ${{ secrets.MINIMAX_API_KEYS }}"
+          echo "BRAVE_API_KEYS: ${{ secrets.BRAVE_API_KEYS }}"
+          echo "SEARXNG_BASE_URLS: ${{ vars.SEARXNG_BASE_URLS || secrets.SEARXNG_BASE_URLS }}"
+          echo "SEARXNG_PUBLIC_INSTANCES_ENABLED: ${{ vars.SEARXNG_PUBLIC_INSTANCES_ENABLED || secrets.SEARXNG_PUBLIC_INSTANCES_ENABLED }}"
+          echo "LITELLM_CONFIG: ${{ vars.LITELLM_CONFIG || secrets.LITELLM_CONFIG }}"
+          echo "LITELLM_CONFIG_YAML: ${{ vars.LITELLM_CONFIG_YAML || secrets.LITELLM_CONFIG_YAML }}"
+          echo "LITELLM_API_KEY: ${{ secrets.LITELLM_API_KEY }}"
+          echo "LITELLM_MODEL: ${{ vars.LITELLM_MODEL || secrets.LITELLM_MODEL }}"
+          echo "LITELLM_FALLBACK_MODELS: ${{ vars.LITELLM_FALLBACK_MODELS || secrets.LITELLM_FALLBACK_MODELS }}"
+          echo "AGENT_LITELLM_MODEL: ${{ vars.AGENT_LITELLM_MODEL || secrets.AGENT_LITELLM_MODEL }}"
+          echo "VISION_MODEL: ${{ vars.VISION_MODEL || secrets.VISION_MODEL }}"
+        
       - name: 随机延迟（避免固定时间访问）
         run: sleep $((RANDOM % 60))  # 随机延迟0-60秒启动
       
